@@ -1,6 +1,6 @@
 {
   "name": "dsh-balance-meter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "DeepSeek 官方 API 余额指示器：常驻输入框下方状态行，显示状态圆点、余额金额与刷新按钮",
   "type": "module",
   "license": "MIT",

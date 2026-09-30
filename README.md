@@ -34,6 +34,20 @@
 `--dsw-alias-state-warn-primary`（黄）、`--dsw-alias-state-error-primary`（红）。
 注意变量族是 **`warn`** 而非 `warning`。
 
+详情面板里的「去充值」是主按钮，必须成对使用 DSH 的主题变量：
+
+```css
+color: var(--dsw-alias-label-primary-foreground);
+background: var(--dsw-alias-button-primary-fill);
+```
+
+这两者在**浅色**主题下是「深底 + 白字」，在**深色**主题下翻转为
+「浅底 + 深字」（`#f9fafb` 底 + `#0f1115` 字）。**不要**用
+`--dsw-alias-label-primary-contrast`：该变量并不存在，回退值 `#fff`
+会在深色主题下把白字压到近白底上，对比度降到 1.05:1 而完全看不见。
+悬停态同理使用 `--dsw-alias-button-primary-hover`，不要用
+`filter: brightness()`——深色主题的近白色底再怎么提亮也不会变暗。
+
 圆点直径 **6px**（`.bm-dot` 的 `width/height`），在状态行里只作为颜色提示。
 
 金额与刷新图标同在一个 `gap:4px` 的 inline-flex 触发器中，二者之间**没有
