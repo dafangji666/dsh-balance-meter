@@ -1,0 +1,8 @@
+# dsh-balance-meter bundle patch
+#
+# Inserted by the official plugin channel:
+#   dsh plugin --profile web add link:/root/dsh-balance-meter
+# The profile boot merges this patch (a single `insert` of the plugin row).
+- insert:
+    - id: balance-meter
+      name: 'dsh-balance-meter'
